@@ -1,5 +1,6 @@
 # visionalarm-privacy
 
-视觉闹钟隐私政策公开页面。
+视觉闹钟公开页面：
 
-https://wj-chitang.github.io/visionalarm-privacy/
+- 隐私政策：https://wj-chitang.github.io/visionalarm-privacy/
+- 技术支持：https://wj-chitang.github.io/visionalarm-privacy/support.html

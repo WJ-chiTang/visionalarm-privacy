@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>技术支持 - 视觉闹钟</title>
+  <style>
+    :root {
+      --accent: #4f6ef7;
+      --text: #1c1c1e;
+      --secondary: #5b5b66;
+      --tertiary: #8e8e99;
+      --bg: #f5f6fa;
+      --card: #ffffff;
+      --border: #e6e7ee;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 40px 20px 80px;
+      background: linear-gradient(180deg, #eef1ff 0%, var(--bg) 320px);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+                   "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 44px;
+      box-shadow: 0 16px 48px rgba(30, 40, 90, 0.08);
+    }
+    h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: -0.5px; }
+    .lead { margin: 0 0 32px; color: var(--secondary); font-size: 15px; }
+    .contact {
+      margin: 0 0 36px;
+      padding: 18px 20px;
+      background: rgba(79, 110, 247, 0.08);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      font-size: 15px;
+    }
+    .contact a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+    h2 { margin: 34px 0 8px; font-size: 17px; letter-spacing: -0.2px; }
+    p, li { color: var(--secondary); font-size: 15px; }
+    p { margin: 0 0 10px; }
+    ul { margin: 6px 0 14px; padding-left: 22px; }
+    li { margin: 4px 0; }
+    a { color: var(--accent); }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h2 { margin: 0 0 6px; }
+    .faq-item p { margin: 0; }
+    .note {
+      margin-top: 36px;
+      padding: 18px 20px;
+      background: #f7f8fd;
+      border-radius: 12px;
+      font-size: 14px;
+      color: var(--secondary);
+    }
+    footer {
+      max-width: 720px;
+      margin: 24px auto 0;
+      text-align: center;
+      color: var(--tertiary);
+      font-size: 13px;
+    }
+    footer a { color: var(--tertiary); }
+    @media (max-width: 600px) {
+      body { padding: 20px 12px 48px; }
+      main { padding: 32px 22px; border-radius: 16px; }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>视觉闹钟 · 技术支持</h1>
+    <p class="lead">遇到问题了？先看看下面的常见问题。如果没解决，直接发邮件给我。</p>
+
+    <div class="contact">
+      联系邮箱：<a href="mailto:3824549242@qq.com">3824549242@qq.com</a><br>
+      为了更快定位问题，请附上：iPhone 型号、iOS 版本、App 版本号（我的 → 关于）、问题描述或截图。
+    </div>
+
+    <div class="faq-item">
+      <h2>怎么设置一个闹钟？</h2>
+      <p>在「添加」页选择时间、重复规则和起床挑战，点底部「叫我起床」即可。第一次设置时系统会请求闹钟和相机权限，按提示允许。</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>为什么按了停止，闹钟还会再响？</h2>
+      <p>这是视觉闹钟的核心机制：系统停止按钮只是让本次闹钟暂时安静，1 分钟后会再次响起，之后间隔依次拉长（3 / 8 / 18 / 33 / 53 分钟）。只有完成视觉挑战，闹钟才会真正停止。</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>挑战做不出来，怎么关掉闹钟？</h2>
+      <p>挑战页底部有「认输」，按住 5 秒即可结束当次闹钟，并会在打卡日历中记一次「赖床」。相机权限被拒时，页面也会提供「去设置」和「再试一次」；如果确实无法使用相机，可以直接长按认输。</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>相机权限被拒绝了怎么办？</h2>
+      <p>打开 iPhone「设置 → 视觉闹钟 → 相机」重新开启，然后回到挑战页点「再试一次」。如果仍然不行，检查「屏幕使用时间 → 内容和隐私访问限制」是否限制了相机。</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>相机会不会偷拍或上传？</h2>
+      <p>不会。画面只在本机用 Apple Vision 框架做实时动作判断，不拍照、不录像、不上传。App 不发起网络请求，也没有广告或分析 SDK。详见<a href="https://wj-chitang.github.io/visionalarm-privacy/">隐私政策</a>。</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>打卡日历里的绿色和橙色是什么意思？</h2>
+      <p>绿色 = 当天所有闹钟挑战都完成；橙色 = 当天有认输或未完成；灰色 = 没记录。一天有多个闹钟时，只要有一次没完成，这天就算橙色。</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>为什么同一时间只能设一个闹钟？</h2>
+      <p>两个闹钟同时响会互相干扰，所以同一分钟只允许一个。想换时间，先在首页左滑删除原来的闹钟。</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>换手机后数据还在吗？</h2>
+      <p>闹钟和打卡数据保存在本机，不会自动同步。如果你使用 iCloud 备份恢复了手机，数据可能随备份恢复；否则重新设置即可。</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>支持哪些系统？</h2>
+      <p>需要 iOS 26.4 及以上。闹钟基于系统 AlarmKit，低于这个版本无法使用。</p>
+    </div>
+
+    <div class="note">
+      还是没解决？发邮件到 <a href="mailto:3824549242@qq.com">3824549242@qq.com</a>，我会尽快回复。也可以在邮件里附上复现步骤，方便我快速定位。
+    </div>
+  </main>
+
+  <footer>
+    © 2026 视觉闹钟 · <a href="https://wj-chitang.github.io/visionalarm-privacy/">隐私政策</a>
+  </footer>
+</body>
+</html>
